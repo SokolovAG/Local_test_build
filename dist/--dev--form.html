@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <title>UI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="template/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="template/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="dist/favicons/favicon.ico">
+    <!-- [ START ] Стили библиотек-->
+    <link rel="stylesheet" type="text/css" href="./template/libs\jquery-ui\themes\base\jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./template/libs\slick-carousel\slick\slick.css">
+    <link rel="stylesheet" type="text/css" href="./template/styles/vendor.css">
+    <!-- [  END  ] Стили библиотек-->
+    <!-- [ START ] Стили проекта-->
+    <link rel="stylesheet" type="text/css" href="./template/template_styles.css">
+    <link rel="stylesheet" type="text/css" href="./template/styles/additional.css">
+    <!-- [  END  ] Стили проекта-->
+    <!-- [ START ] Переменные bitrix-->
+    <script>
+        window.App = window.App || {};
+        App.BX = {
+            TEMPLATE_PATH: './template/'
+        }
+    </script>
+    <!-- [  END  ] Переменные bitrix-->
+</head>
+
+<body>
+    <main class="main clearfix">
+        <div class="wrapper">
+            <h1>Элементы формы</h1>
+            <form class="form" action="">
+                <div class="form__item">
+                    <label class="form__title">Поле ввода</label>
+                    <input class="error" type="text" name="" placeholder="Поле ввода">
+                    <div class="error-msg">Поле обязательно для заполнения</div>
+                </div>
+                <div class="form__item">
+                    <label class="form__title">Выпадающий список</label>
+                    <select>
+                        <option>Выберите пункт</option>
+                        <option>Выберите пункт</option>
+                        <option>Выберите пункт</option>
+                    </select>
+                </div>
+                <div class="form__item">
+                    <label class="form__title">Радиобоксы</label>
+                    <div class="form__item">
+                        <input type="radio" id="action-11" name="test" checked="">
+                        <label for="action-11">Летний сезон подарков открыт!</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="radio" id="action-22" name="test">
+                        <label for="action-22">В лето вместе с JBL!</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="radio" id="action-33" name="test">
+                        <label for="action-33">500 р. В нашу пользу!</label>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label class="form__title">Чекбоксы</label>
+                    <div class="form__item">
+                        <input type="checkbox" id="action-1" checked="">
+                        <label for="action-1">Летний сезон подарков открыт!</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="checkbox" id="action-2">
+                        <label for="action-2">В лето вместе с JBL!</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="checkbox" id="action-3">
+                        <label for="action-3">500 р. В нашу пользу!</label>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label class="form__title">Чекбоксы</label>
+                    <div class="form-item error">
+                        <input type="checkbox" id="action-111" checked="">
+                        <label for="action-111">Летний сезон подарков открыт!</label>
+                    </div>
+                    <div class="form-item error">
+                        <input type="radio" id="action-222" checked="">
+                        <label for="action-222">В лето вместе с JBL!</label>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label class="form__title">Текстовый блок</label>
+                    <textarea></textarea>
+                </div>
+                <div class="form__item">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+        <form class="setting-form wrapper" action="#" method="get">
+            <ul class="setting-form__list">
+                <li class="setting-form__item">
+                    <h2 class="setting-form__item-title">Личные данные</h2>
+                    <ul class="setting-form__list">
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="text" name="name" placeholder="Имя" value="Дмитрий" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="text" name="surname" placeholder="Фамилия" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="text" name="patronymic" placeholder="Отчество" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="text" name="birthday" placeholder="Дата рождения" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="setting-form__item">
+                    <h2 class="setting-form__item-title">Контактные данные</h2>
+                    <ul class="setting-form__list">
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="text" name="tel" placeholder="+7(___)-___-____" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="text" name="email" placeholder="E-mail" value="dmitriy_loginov@gmail.com" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                        <li class="setting-form__list-item">
+                            <input class="setting-form__input js-input" type="password" name="password" placeholder="Пароль [********]" disabled>
+                            <button class="btn__inline setting-form__change js-input-change" type="button">изменить</button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="setting-form__item address">
+                    <h2 class="setting-form__item-title address__title">Адресная книга</h2>
+                    <section class="address__inner">
+                        <div class="address__item">
+                            <button class="btn__inline address__change js-change-address" type="button">изменить</button>
+                            <h3 class="address__inner-title">Текущий адрес доставки</h3>
+                            <ul class="address__list">
+                                <li class="address__list-item">
+                                    <input class="radiobtn" type="radio" name="address-radiobtn" id="address_1" checked>
+                                    <label class="radiolbl address__list-radio-lbl" for="address-1">432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54</label>
+                                    <input class="adress__input" type="text" name="address_1" value="432 071 Россия, г. Троицк, ул. Ленина д.34. кв.54">
+                                    <button class="btn__inline address__del js-delete-address" type="button">удалить</button>
+                                </li>
+                                <li class="address__list-item">
+                                    <input class="radiobtn" type="radio" name="address-radiobtn" id="address_2">
+                                    <label class="radiolbl address__list-radio-lbl" for="address_2">445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6</label>
+                                    <input class="adress__input" type="text" name="address_2" value="445 086 Россия, г. Керчь, ул. Первого Интернационала д.14. кв.6">
+                                    <button class="btn__inline address__del js-delete-address" type="button">удалить</button>
+                                </li>
+                            </ul>
+                            <button class="btn address__btn-add" type="button">Добавить еще один адрес</button>
+                        </div>
+                        <div class="add-address clearfix">
+                            <h3 class="add-address__title">Добавить адрес</h3>
+                            <div class="add-address__wrapper">
+                                <input class="setting-form__input add-address__item" type="text" name="new-index" placeholder="Индекс">
+                                <select class="select add-address__item" name="new-country">
+                                    <option value="" disabled selected hidden>Страна</option>
+                                    <option value="Россия">Россия</option>
+                                    <option value="Белоруссия">Белоруссия</option>
+                                    <option value="Латвия">Латвия</option>
+                                </select>
+                                <select class="select add-address__item" name="new-city">
+                                    <option value="" disabled selected hidden>Город</option>
+                                    <option value="Россия">Москва</option>
+                                    <option value="Белоруссия">Минск</option>
+                                    <option value="Латвия">Рига</option>
+                                </select>
+                            </div>
+                            <input class="setting-form__input add-address__item add-address__item--full" type="text" name="new-address" placeholder="Адрес">
+                            <button class="btn add-address__submit" type="button">Добавить адрес</button>
+                        </div>
+                    </section>
+                </li>
+                <li class="setting-form__item">
+                    <h2 class="setting-form__item-title">Подписки и уведомления</h2>
+                    <ul class="setting-form__subscript">
+                        <li class="setting-form__subscript-item">
+                            <input class="checkbox" type="checkbox" name="subscription" id="subscription_1" checked>
+                            <label class="checkboxlbl" for="subscription_1">Оповещеать меня о текущих акциях по e-mail</label>
+                        </li>
+                        <li class="setting-form__subscript-item">
+                            <input class="checkbox" type="checkbox" name="subscription" id="subscription_2" checked>
+                            <label class="checkboxlbl" for="subscription_2">Оповещеать меня о текущих акциях по Sms </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </form>
+        <section class="social">
+            <h2 class="social__title">Социальные сети</h2>
+            <p class="social__caption">Привяжите учетную запись социальной сети и используйте ee для входа</p>
+            <ul class="social__list">
+                <li class="social__item">
+                    <a class="social__link social__link--fb" href="#">Facebook</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--vk" href="#">Вконтакте</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--tw" href="#">Twitter</a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--ok" href="#">Одноклассники</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="template/scripts/setting-form.js"></script>
+</body>
+
+</html>
